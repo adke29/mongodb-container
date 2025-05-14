@@ -29,8 +29,8 @@ cd mongodb-container
 Create a .env file in the root directory with the following contents:
 
 ```env
-MONGO_INITDB_ROOT_USERNAME=mongoadmin
-MONGO_INITDB_ROOT_PASSWORD=securepassword
+MONGODB_INITDB_ROOT_USERNAME=mongoadmin
+MONGODB_INITDB_ROOT_PASSWORD=securepassword
 ```
 
 ### 3. Start the MongoDB container
@@ -39,7 +39,7 @@ MONGO_INITDB_ROOT_PASSWORD=securepassword
 docker compose up -d
 ```
 
-MongoDB will be available at mongodb://localhost:27017
+MongoDB will be available at mongodb://{{MONGODB_INITDB_ROOT_USERNAME}}:{{MONGODB_INITDB_ROOT_PASSWORD}}@localhost:27017/{{DATABASE}}?authSource=admin
 
 ### 4. Stopping the Container
 
