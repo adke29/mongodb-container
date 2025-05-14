@@ -55,3 +55,13 @@ mongodb-container/
 ├── docker-compose.yml
 └── README.md
 ```
+
+## Common Issues
+
+### Permission Denied
+
+If you got error `Permission denied [system:13]: "/data/db/journal"`, run this command:
+
+```bash
+chmod 777 ./data
+```
