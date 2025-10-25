@@ -5,11 +5,11 @@ services:
     ports:
       - 127.0.0.1:27017:27017
     volumes:
-      - ./volumes/mongodb:/data/db
+      - ./data:/data/db
     environment:
+      TZ: ${TZ:-UTC}
       MONGODB_INITDB_ROOT_USERNAME: ${MONGODB_INITDB_ROOT_USERNAME:-mongo}
       MONGODB_INITDB_ROOT_PASSWORD: ${MONGODB_INITDB_ROOT_PASSWORD:-mongo}
-      TZ: ${TZ:-UTC}
     restart: unless-stopped
   # mongo-express:
   #   image: mongo-express
