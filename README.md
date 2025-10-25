@@ -1,4 +1,4 @@
-# mongodb-container
+# [DEPRECATED] mongodb-container
 
 A lightweight Docker Compose project to spin up a standalone MongoDB container using environment variables for easy configuration.
 
