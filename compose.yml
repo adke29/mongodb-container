@@ -1,11 +1,11 @@
 services:
   mongodb:
-    image: mongodb/mongodb-community-server:8.0.9-ubuntu2204
+    image: mongodb/mongodb-community-server
     container_name: mongodb
     ports:
       - 127.0.0.1:27017:27017
     volumes:
-      - ./data:/data/db
+      - ./volumes/mongodb:/data/db
     environment:
       MONGODB_INITDB_ROOT_USERNAME: ${MONGODB_INITDB_ROOT_USERNAME:-mongo}
       MONGODB_INITDB_ROOT_PASSWORD: ${MONGODB_INITDB_ROOT_PASSWORD:-mongo}
